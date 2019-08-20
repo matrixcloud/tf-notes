@@ -46,9 +46,9 @@ def read_image(path):
     return r
 
 def start():
-    tests = input('Input the number of test images')
-    for i in range(tests):
-        path = input('The path of test image')
+    tests = input('Input the number of test images: ')
+    for i in range(int(tests)):
+        path = input('The path of test image: ')
         data = read_image(path)
         predicted_value = predict(data)
         print('The predicted number is: %s' % predicted_value)
