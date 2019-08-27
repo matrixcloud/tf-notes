@@ -31,7 +31,7 @@ def read_image(path):
     img = Image.open(path)
     img = img.resize((28, 28), Image.ANTIALIAS)
     img_arr = np.array(img.convert('L'))
-    threshold = 50
+    threshold = 60
     for i in range(28):
         for j in range(28):
             img_arr[i][j] = 255 - img_arr[i][j]
